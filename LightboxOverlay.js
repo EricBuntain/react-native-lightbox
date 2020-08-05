@@ -99,8 +99,7 @@ export default class LightboxOverlay extends Component {
       onPanResponderMove: Animated.event([
         null,
         { dy: this.state.pan }
-        { useNativeDriver: false }
-      ],),
+      ],{ useNativeDriver: false }),
       onPanResponderTerminationRequest: (evt, gestureState) => true,
       onPanResponderRelease: (evt, gestureState) => {
         if(Math.abs(gestureState.dy) > DRAG_DISMISS_THRESHOLD) {
